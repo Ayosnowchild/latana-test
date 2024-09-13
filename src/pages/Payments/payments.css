@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui;
+}
+
+.payment-main {
+    padding: 32px 0px 0px 32px;
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+
+.main-up {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.main-up-sub  {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.main-sec {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 40px
+}
+
+.main-up-ligh {
+    font-size: 12px;
+    color: #A3A3A3;
+}
+
+.main-up-dark {
+    font-size: 12px;
+    color: #2E2E2E;
+}
+
+.main-up-big  {
+    font-size: 20px;
+    color: #2E2E2E;
+}
+
+.main-rem  {
+width: 100%;
+background-color: #FCFCFD;
+border: 1px solid #E8E8E8;
+border-radius: 24px 24px  0px 24px;
+padding: 8px 16px 48px 8px;
+}
+
+.main-rem-dash {
+width: 100%; 
+border: 1px solid #EAECF0;
+border-radius: 12px;
+padding: 16px;
+}
+
+.main-rem-one {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+
+.main-button-sec {
+    display: flex;
+    gap: 8px;
+ }
+
+ .main-button-sec-btn {
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    border: 1px solid #E7E6EA; 
+    align-items: center;
+    border-radius: 8px;
+ }
+
+ .main-rem-heading {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1F1F1F;
+ }
+
+ .main-sub-tab-text-ac {
+    font-weight: 600;
+    font-size: 14px;
+    color: #075AAA;
+    border-bottom: 1px solid #075AAA;
+    padding-bottom: 2px;
+ }
+
+ .main-sub-tab-text-inac {
+    font-size: 14px;
+    color: #5C5C5C;
+ }
+
+
+ .nav-con  {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+ }
+
+ .main-sub-tab {
+    display: flex;
+    gap: 24px;
+ }
+
+ .fil-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+ }
+
+ .fil-main {
+    display: flex;
+    gap: 8px;
+ }
+
+ .filter-sec  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px 6px 8px;
+    border: 1px solid #F0F2F4;
+    border-radius: 8px;
+ }
