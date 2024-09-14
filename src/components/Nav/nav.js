@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   ArrUpSvg,
   CustomerSvg,
@@ -15,40 +16,71 @@ export default function Nav() {
     <div className="nav-main">
       <LogoSvg />
       <div className="nav-main-grp">
-        <NavTabs title={"Overview"}>
-          <OverviewSvg />
-        </NavTabs>
-        <div className="nav-tab-other">
-          <div className="nav-special">
-            <PropertySvg />
-            <p className="nav-tab-text">Property</p>
+        <NavLink
+          to={"/overview"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <NavTabs title={"Overview"}>
+            <OverviewSvg />
+          </NavTabs>
+        </NavLink>
+        <NavLink
+          to={"/prop"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <div className="nav-tab-other">
+            <div className="nav-special">
+              <PropertySvg />
+              <p className="nav-tab-text">Property</p>
+            </div>
+            <ArrUpSvg />
           </div>
-          <ArrUpSvg />
-        </div>
-        <NavTabs title={"Customer"}>
-          <CustomerSvg />
-        </NavTabs>
-        <NavTabs title={"Payments"}>
-          <PaymentsSvg />
-        </NavTabs>
-        <NavTabs title={"Investments"}>
-          <InvestmentSvg />
-        </NavTabs>
-        <div className="nav-tab-other">
-          <div className="nav-special">
-            <ReviewSvg />
-            <p className="nav-tab-text">Review</p>
+        </NavLink>
+        <NavLink
+          to={"cus"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <NavTabs title={"Customer"}>
+            <CustomerSvg />
+          </NavTabs>
+        </NavLink>
+
+        <NavLink
+          to={"/"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <NavTabs title={"Payments"} more={true}>
+            <PaymentsSvg />
+          </NavTabs>
+        </NavLink>
+        <NavLink
+          to={"/investments"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <NavTabs title={"Investments"}>
+            <InvestmentSvg />
+          </NavTabs>
+        </NavLink>
+        <NavLink
+          to={"rev"}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          <div className="nav-tab-other">
+            <div className="nav-special">
+              <ReviewSvg />
+              <p className="nav-tab-text">Review</p>
+            </div>
+            <div className="rev-dig">10</div>
           </div>
-          <div className="rev-dig">10</div>
-        </div>
+        </NavLink>
       </div>
     </div>
   );
 }
 
-export function NavTabs({ children, title }) {
+export function NavTabs({ children, title, more }) {
   return (
-    <div className="nav-tab">
+    <div className={more ? "nav-tab-ac" : "nav-tab"}>
       <div>{children}</div>
       <p className="nav-tab-text">{title}</p>
     </div>

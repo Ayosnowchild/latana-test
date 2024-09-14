@@ -50,6 +50,7 @@
 
 .main-rem  {
 width: 100%;
+display: flex;flex-direction: column; gap: 32px;
 background-color: #FCFCFD;
 border: 1px solid #E8E8E8;
 border-radius: 24px 24px  0px 24px;
@@ -249,4 +250,90 @@ border-collapse: collapse;
     align-items: center;
     justify-content: center;
     border-radius: 8px
+  }
+
+  .purchase {
+    color: #075AAA;
+    font-size: 12px;
+  }
+
+  .in-svg {
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    height: 36px;
+    width: 36px;
+    padding: 8px;
+  }
+
+  .pos {
+    border-radius: 4px;
+    background-color: #9ce0b8;
+    height: 26px;
+    width: 54px;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #14AE5C;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .neg {
+    border-radius: 4px;
+    background-color: #f4aeae;
+    height: 26px;
+    width: 54px;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #EB5757;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .inv-card-con {
+    border-radius: 8px;
+   border: 1px solid #E8E8E8;
+   width: 25%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-ra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .card-one {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .card-bg {
+    font-size: 28px;
+    font-weight: 500;
+    color: #2E2E2E;
+  }
+
+  
+  .card-sm {
+    font-size: 12px;
+    font-weight: 500;
+    color: #3D3D3D;
+  }
+  
+  .inves-dash {
+   display: flex;
+   gap: 16px;
+   align-items: center;
   }

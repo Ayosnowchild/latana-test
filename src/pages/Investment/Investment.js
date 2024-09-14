@@ -1,31 +1,33 @@
 import React, { useState } from "react";
-import "./payments.css";
+import "./Investment.css";
 import Nav from "../../components/Nav/nav";
 import {
-  AddSvg,
   CheckSvg,
   ClockSvg,
+  DownarrSvg,
   DownSvg,
   ExportSvg,
   FlagSvg,
   NextSvg,
   PrevSvg,
   SearchSvg,
+  UpSvg,
   ViewSvg,
+  WallSvg,
 } from "../../icons/logo";
 import Foo from "../../components/foo";
 import TransactionModal from "../../components/modals/modal";
-function Payments() {
+function Investment() {
   const [showModal, setShowModal] = useState(false);
   const [selectedTransaction, setSelectedTransaction] = useState(null);
   const transactions = [
     {
       id: 1,
       date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
+      transactionId: "Bradford Apartment",
       customer: "Owolu Opeyemi",
       amount: "800.00",
-      status: "Success",
+      status: "Property Purchase",
       bank: "Access bank",
       recipientAccountNumber: "09548765498",
       description: "Returns/ March 31/Bradford",
@@ -33,98 +35,10 @@ function Payments() {
     {
       id: 2,
       date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
+      transactionId: "Fortune Apartment",
       customer: "Victor Tosin",
       amount: "00.00",
-      status: "Error",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 3,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Azeez Kiki",
-      amount: "500,000.00",
-      status: "Success",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 4,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Kiki Emmmnauel",
-      amount: "2,500,000.00",
-      status: "Success",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 5,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Victor Tosin",
-      amount: "00.00",
-      status: "Error",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 6,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Azeez Kiki",
-      amount: "500,000.00",
-      status: "Success",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 7,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Kiki Emmmnauel",
-      amount: "2,500,000.00",
-      status: "Success",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 8,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Victor Tosin",
-      amount: "00.00",
-      status: "Error",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 9,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Azeez Kiki",
-      amount: "500,000.00",
-      status: "Success",
-      bank: "Access bank",
-      recipientAccountNumber: "09548765498",
-      description: "Returns/ March 31/Bradford",
-    },
-    {
-      id: 10,
-      date: "May 1, 2023, 9:00 AM",
-      transactionId: "7GJ17231HASD...1313",
-      customer: "Kiki Emmmnauel",
-      amount: "2,500,000.00",
-      status: "Success",
+      status: "Property Purchase",
       bank: "Access bank",
       recipientAccountNumber: "09548765498",
       description: "Returns/ March 31/Bradford",
@@ -149,19 +63,35 @@ function Payments() {
         <div className="main-up">
           <div className="main-up-sub">
             <p className="main-up-ligh">Dashboard</p>
-            <p className="main-up-dark">&gt; Payments</p>
+            <p className="main-up-dark">&gt; Investments</p>
           </div>
-          <p className="main-up-big">Payments</p>
+          <p className="main-up-big">Investments</p>
         </div>
         <div className="main-rem">
+          <div className="inves-dash">
+            <InvestmentDashboardCard
+              rate={"pos"}
+              description={"N300,000,000.00"}
+              title={"Total Property Purchase"}
+              change={"20%"}
+            />
+            <InvestmentDashboardCard
+              rate={"neg"}
+              description={"N60,000,000.00"}
+              title={"Total Co-Ownership"}
+              change={"20%"}
+            />
+            <InvestmentDashboardCard
+              rate={"neg"}
+              description={"N60,000,000.00"}
+              title={"Total Cash Investment"}
+              change={"20%"}
+            />
+          </div>
           <div className="main-rem-dash">
             <div className="main-rem-one">
-              <p className="main-rem-heading">Transaction History</p>
+              <p className="main-rem-heading">Investment History</p>
               <div className="main-button-sec">
-                <div className="main-button-sec-btn">
-                  <AddSvg />
-                  <p>Add Payment</p>
-                </div>
                 <div className="main-button-sec-btn">
                   <ExportSvg />
                   <p>Export</p>
@@ -169,9 +99,10 @@ function Payments() {
               </div>
             </div>
             <div className="main-sub-tab">
-              <p className="main-sub-tab-text-ac">All payments</p>
-              <p className="main-sub-tab-text-inac">Success</p>
-              <p className="main-sub-tab-text-inac">Failed</p>
+              <p className="main-sub-tab-text-inac">All </p>
+              <p className="main-sub-tab-text-inac">Co-Ownership</p>
+              <p className="main-sub-tab-text-ac">Property Purchase</p>
+              <p className="main-sub-tab-text-inac">Cash Investments</p>
             </div>
             <div className="fil-box">
               <div className="fil-main">
@@ -203,10 +134,10 @@ function Payments() {
                     <CheckSvg />
                   </th>
                   <th>Date Created</th>
-                  <th>Transaction ID</th>
+                  <th>Property Invested</th>
                   <th>Customer</th>
                   <th>Amount</th>
-                  <th>Status</th>
+                  <th>Investment Type</th>
                   <th>Actions</th>
                 </tr>
                 {transactions.map((item) => {
@@ -220,9 +151,7 @@ function Payments() {
                       <td>{item.customer}</td>
                       <td>{item.amount}</td>
                       <td>
-                        <span className={`status ${item.status.toLowerCase()}`}>
-                          {item.status}
-                        </span>
+                        <span className="purchase">{item.status}</span>
                       </td>
                       <td>
                         <span className="ac-icons">
@@ -261,7 +190,6 @@ function Payments() {
       </div>
       {selectedTransaction && (
         <TransactionModal
-          pay={true}
           open={showModal}
           onClose={close}
           transaction={selectedTransaction}
@@ -271,4 +199,24 @@ function Payments() {
   );
 }
 
-export default Payments;
+export default Investment;
+
+function InvestmentDashboardCard({ title, description, change, rate }) {
+  return (
+    <div className="inv-card-con">
+      <div className="card-one">
+        <p className="card-sm">{title}</p>
+        <p className="card-bg">{description}</p>
+      </div>
+      <div className="card-ra">
+        <span className={rate === "pos" ? "pos" : "neg"}>
+          <div>{rate === "pos" ? <UpSvg /> : <DownarrSvg />}</div>
+          <p>{change}</p>
+        </span>
+        <div className="in-svg">
+          <WallSvg />
+        </div>
+      </div>
+    </div>
+  );
+}
